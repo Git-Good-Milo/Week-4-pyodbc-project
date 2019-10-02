@@ -62,6 +62,6 @@ class ConnectMsS():
         # THe ID of the specific record
         # Destroy the record
             # The Cursor cannot make transaction (got to dicumentaion)
-    
+
 
 

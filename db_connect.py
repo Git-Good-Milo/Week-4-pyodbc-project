@@ -14,7 +14,7 @@ conn_nwdb = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+serv
 
 
 # Create a curser
-# Allows us to executre read only queries
+# Allows us to execute read only queries
 
 cursor = conn_nwdb.cursor()
 

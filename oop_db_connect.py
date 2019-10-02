@@ -43,15 +43,27 @@ class ConnectMsS():
     # CRUD
 
     # Create 1 entry
-        # USe INSERT
-        # The corsor cannot make transactions (Go to documentation)
+        # Use INSERT
+        # The cursor cannot make transactions (Go to documentation)
+
+
 
     # Read all enteries
         # Fetch all records as a List of Diciontaies
+    def read_all_sql_entries(self, table):
+        query_entry = self.__filter_query(f"SELECT * FROM {table}")
+        while True:
+            record = query_entry.fetchone()
+            if record is None:
+                break
+            print(record)
 
     # Read one entry
         # Fetch a specific Record
         # Get one value using ID
+    def read_one_sql_id(self, table, id, number):
+        query_entry = self.__filter_query(f"SELECT * FROM {table} WHERE {id} = {number} ").fetchone()
+        return query_entry
 
     # Update 1 Entry
         # The ID of the record to update
